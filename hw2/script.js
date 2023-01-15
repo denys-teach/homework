@@ -4,9 +4,9 @@
     let weight = '88.3';
     let height = '1.75';
 
-    const bmi = (weight / height**2).toFixed(1);
+    const bmi = (Number(weight / height**2)).toFixed(1);  //Виправлено.
     console.log(bmi); // 28.8
-} */
+}  */
 
 // Напиши скрипт, який виводить у консоль заокруглені вгору/вниз і т.д. Значення змінної value.
 // Використовуй методи Math.floor(), Math.ceil() та Math.round(). Перевірте, що буде в консолі при значеннях 27.3 і 27.9.
@@ -29,6 +29,9 @@
         let MM = minutes % 60;
         if(MM<10){
             MM = '0' + MM;
+        }
+        if(HH<10){
+            HH = '0' + HH;
         }
         console.log(`minutes ${minutes}, time in format HH:MM: ${HH}:${MM}`);
     }
