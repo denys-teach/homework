@@ -71,12 +71,13 @@
 
 // 5) Вивести у консоль піраміду. Змінна вказує кількість рядків, з яких побудується піраміда. Піраміда повинна будуватися в однаковому візуальному вигляді між собою, але строго враховуючи кількість рядків
 
-
-{
-    function piramid(numberOfRows){
-        for(let i = numberOfRows-1, j =1; i>=0&&j<=(numberOfRows); i--,j++){
-            console.log(i,(j+(j-1)));
+/* {
+    function pyramid(n) {
+        for(let i=1; i<= n; i++){
+          let str = ' '.repeat(n-i);
+          let str2 = '*'.repeat(i*2 -1)
+          console.log(str + str2 + str);
         }
-    }
-    piramid(4);
-}
+      }
+      pyramid(5);
+} */
