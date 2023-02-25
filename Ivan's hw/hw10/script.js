@@ -82,51 +82,150 @@
             div.append(selectCities);
             countries.onchange = ()=>{
                 countries.innerText = '';
-                cities.append(optionCity);             //незрозуміло, як виконати цей пункт(добавляет в select#cities элементы option с городами из выбранной только что страны.)
+                             //незрозуміло, як виконати цей пункт(добавляет в select#cities элементы option с городами из выбранной только что страны.)
             }
             for (const country in data) {
                     const arrCountry = data[country];
                     const option = document.createElement('option');
                     option.innerText = country;
-                    
                     countries.append(option);
                     console.log(arrCountry);
                     for (const cities in arrCountry) {
                             const arrCities = arrCountry[cities];
                             const optionCity = document.createElement('option');
-                            
                             optionCity.innerText = arrCities;
+                            cities.append(optionCity);
                             console.log(arrCities);
                         }
                     }
             console.log(data) //изучите структуру, получаемую с сервера в консоли
         })
-    } */
-
+    }
+ */
     //HW DOM (из ДЗ: Цикли)
 
     //DOM: multiply table
 
-    {
-        const div = document.createElement('div');
-        document.body.append(div);
-        div.id = 'container';
-        for(let i = 0; i<10;i++){
-            const divBlock = document.createElement('div');
-            div.append(divBlock);
-            divBlock.id = 'block';
-            block.style.border = 'solid 1px red';
-            block.style.height = '100px';
-            block.style.width = '100px';
-            block.style.display = 'inline-block';
+    /* {
+        const table = document.createElement('table');
+        table.border = `1`;
+        table.style.width = `250px`;
+        document.body.append(table);
+        //let str ='';
+        const tr0 = document.createElement('tr');
+        table.append(tr0);
+        for(let k = 0;k<10;k++){
+            const td = document.createElement('td');
+            td.innerText = `${k}`;
+            tr0.append(td);
+            //str+=k;
         }
-        /* for(let i = 0; i<10;i++){
-            const div2 = document.createElement('div');
-            div.append(div2);
-            div.innerText = `${i}`;
-            div.style.border = 'solid 1px red';
-            div.style.width = '20px';
-            div.style.height = '18px';
-            div.style.textAlign = 'center';
-        } */
-    }
+        //str+='\n';
+        
+        for(let x = 1; x<10;x++){
+            const tr1 = document.createElement('tr'); 
+            const td = document.createElement('td');
+            td.innerText = `${x}`;
+            tr1.append(td);
+            //str+=x;
+            for(let i =1;i<10;i++){
+                const td = document.createElement('td');
+                td.innerText = `${i*x}`;
+                tr1.append(td);
+                //str+=i*x;
+            }
+            const br = document.createElement('br'); 
+            tr1.append(br);
+            //str+='\n';
+            table.append(tr1);
+        }
+        //console.log(str);
+    } */
+//DOM: highlight cell
+
+/* {
+    const table = document.createElement('table');
+        table.border = `1`;
+        table.style.width = `250px`;
+        document.body.append(table);
+        //let str ='';
+        const tr0 = document.createElement('tr');
+        table.append(tr0);
+        for(let k = 0;k<10;k++){
+            const td = document.createElement('td');
+            td.innerText = `${k}`;
+            tr0.append(td);
+            //str+=k;
+        }
+        //str+='\n';
+        
+        for(let x = 1; x<10;x++){
+            const tr1 = document.createElement('tr'); 
+            const td = document.createElement('td');
+            td.innerText = `${x}`;
+            tr1.append(td);
+            //str+=x;
+            for(let i =1;i<10;i++){
+                const td = document.createElement('td');
+                td.innerText = `${i*x}`;
+                tr1.append(td);
+                td.onmouseover = ()=>{
+                    td.style.background = `lightblue`;
+                }
+                td.onmouseout = ()=>{
+                    td.style.background = ``;
+                }
+                //str+=i*x;
+            }
+            const br = document.createElement('br'); 
+            tr1.append(br);
+            //str+='\n';
+            table.append(tr1);
+        }
+} */
+
+//DOM: Highlight cross
+/* {
+    const table = document.createElement('table');
+        table.border = `1`;
+        table.style.width = `250px`;
+        document.body.append(table);
+        //let str ='';
+        const tr0 = document.createElement('tr');
+        table.append(tr0);
+        for(let k = 0;k<10;k++){
+            const td = document.createElement('td');
+            td.innerText = `${k}`;
+            tr0.append(td);
+            //str+=k;
+        }
+        //str+='\n';
+        
+        for(let x = 1; x<10;x++){
+            const tr1 = document.createElement('tr'); 
+            const td = document.createElement('td');
+            td.innerText = `${x}`;
+            tr1.append(td);
+            //str+=x;
+            for(let i =1;i<10;i++){
+                const td = document.createElement('td');
+                td.innerText = `${i*x}`;
+                tr1.append(td);
+                td.onmouseover = ()=>{
+                    td.style.background = `lightblue`;
+                    tr1.style.background = `lightblue`;
+                }
+                td.onmouseout = ()=>{
+                    td.style.background = ``;
+                    tr1.style.background = ``;
+                }
+                //str+=i*x;
+            }
+            const br = document.createElement('br'); 
+            tr1.append(br);
+            //str+='\n';
+            table.append(tr1);
+        }
+} */
+
+    
